@@ -8,43 +8,9 @@ exports.getComponent = function () {
       return;
     }
     // Do something with the packet, then
-    c.outPorts.out.send(payload);
+    if(payload.n === 0)
+      c.outPorts.out.send(payload.b);
   });
   c.outPorts.add('out');
   return c;
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-kasdflkjasd
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-laskdfjlaskdf
