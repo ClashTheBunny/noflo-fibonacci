@@ -2,8 +2,10 @@
     "properties": {
         "name": "main",
         "environment": {
-            "type": "noflo-browser"
+            "type": "noflo-browser",
+            "content": ""
         },
+        "description": "Kick's off a fibonacci calculation",
         "icon": ""
     },
     "inports": {},
