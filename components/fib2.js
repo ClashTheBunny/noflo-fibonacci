@@ -12,7 +12,6 @@ exports.getComponent = function () {
   var c = new noflo.Component();
 
   c.inPorts.add('in', function (event, payload) {
-    console.log(Date.now());
     if (event !== 'data') {
       return;
     }
@@ -21,9 +20,7 @@ exports.getComponent = function () {
       payload = fibIter({a: 1, b: 0, n: payload});
       c.outPorts.out.send(payload);
     } else {
-      if(payload.n === 0) {
-        console.log(payload.b);
-      } else {
+      if(payload.n !== 0) {
         payload = fibIter(payload);
         c.outPorts.out.send(payload);
       }
