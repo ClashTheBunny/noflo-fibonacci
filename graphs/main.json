@@ -42,20 +42,20 @@
                 "height": 72
             }
         },
-        "test/fib_9z10f": {
-            "component": "test/fib",
+        "fibonacci/fib_wln9p": {
+            "component": "fibonacci/fib",
             "metadata": {
-                "label": "test/fib",
+                "label": "fibonacci/fib",
                 "x": 288,
-                "y": 36,
+                "y": 180,
                 "width": 72,
                 "height": 72
             }
         },
-        "test/fib-ans_zvvgd": {
-            "component": "test/fib-ans",
+        "fibonacci/fib-ans_npymo": {
+            "component": "fibonacci/fib-ans",
             "metadata": {
-                "label": "test/fib-ans",
+                "label": "fibonacci/fib-ans",
                 "x": 396,
                 "y": 36,
                 "width": 72,
@@ -76,11 +76,11 @@
         },
         {
             "src": {
-                "process": "test/fib_9z10f",
+                "process": "fibonacci/fib_wln9p",
                 "port": "out"
             },
             "tgt": {
-                "process": "test/fib_9z10f",
+                "process": "fibonacci/fib_wln9p",
                 "port": "in"
             },
             "metadata": {}
@@ -91,7 +91,7 @@
                 "port": "out"
             },
             "tgt": {
-                "process": "test/fib_9z10f",
+                "process": "fibonacci/fib_wln9p",
                 "port": "in"
             },
             "metadata": {
@@ -100,7 +100,7 @@
         },
         {
             "src": {
-                "process": "test/fib-ans_zvvgd",
+                "process": "fibonacci/fib-ans_npymo",
                 "port": "out"
             },
             "tgt": {
@@ -111,14 +111,16 @@
         },
         {
             "src": {
-                "process": "test/fib_9z10f",
+                "process": "fibonacci/fib_wln9p",
                 "port": "out"
             },
             "tgt": {
-                "process": "test/fib-ans_zvvgd",
+                "process": "fibonacci/fib-ans_npymo",
                 "port": "in"
             },
-            "metadata": {}
+            "metadata": {
+                "route": 0
+            }
         },
         {
             "data": "bang!",
@@ -128,7 +130,7 @@
             }
         },
         {
-            "data": 99,
+            "data": "9",
             "tgt": {
                 "process": "math/SendNumber_fc9ot",
                 "port": "number"

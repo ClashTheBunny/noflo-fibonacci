@@ -11,7 +11,7 @@ var fibIter = function(payload) {
 exports.getComponent = function () {
   var c = new noflo.Component();
 
-  c.inPorts.add('in', function (event, payload) {
+  c.inPorts.add('in', { datatype: 'int' }, function (event, payload) {
     if (event !== 'data') {
       return;
     }
