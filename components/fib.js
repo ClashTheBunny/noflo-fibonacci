@@ -16,14 +16,17 @@ exports.getComponent = function () {
       return;
     }
     // Do something with the packet, then
-    if(typeof payload == 'number') {
-      payload = fibIter({a: 1, b: 0, n: payload});
-      c.outPorts.out.send(payload);
-    } else {
+    if(typeof payload == 'object') {
       if(payload.n !== 0) {
         payload = fibIter(payload);
+        if(payload.b > Number.MAX_SAFE_INTEGER)
+          throw new RangeError('Sorry, JavaScript fails to calculate integers after ' +
+                               Number.MAX_SAFE_INTEGER);
         c.outPorts.out.send(payload);
       }
+    } else {
+      payload = fibIter({a: 1, b: 0, n: Number(payload)});
+      c.outPorts.out.send(payload);
     }
 
   });
